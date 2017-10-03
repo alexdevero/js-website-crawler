@@ -1,6 +1,7 @@
 const cheerio = require('cheerio');
 const request = require('request');
 const URL = require('url-parse');
+const readline = require('readline'); // For user prompt to allow predictions
 
 const startUrl = 'http://www.arstechnica.com/';
 const maxPagesToVisit = 10;
@@ -11,6 +12,12 @@ let pagesToVisit = [];
 let pagesVisited = {};
 let url = new URL(startUrl);
 let baseUrl = url.protocol + '//' + url.hostname;
+
+// Add reading user input:
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
 // Search for word
 const searchForWord = ($, word) => {
@@ -94,3 +101,9 @@ const crawl = () => {
 
 pagesToVisit.push(startUrl);
 crawl();
+
+// Ask user for URL - to be implemented
+// rl.question('Please enter the URL you want to visit: ', (answer) => {
+//   pagesToVisit.push(answer);
+//   crawl();
+// });
