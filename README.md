@@ -9,3 +9,19 @@
 # JavaScript Website crawler
 
 Website crawler written in JavaScript built with Node.js.
+
+### Start crawler
+```
+yarn
+npm run start
+```
+
+### Build (compile) crawler
+```
+npm run build
+```
+
+### Test source code
+```
+npm run test
+```
