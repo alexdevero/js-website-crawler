@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "set NODE_ENV=development && node ./src/crawler.js",
-    "build": "set NODE_ENV=production && rimraf ./dist && babel ./src/crawler.js --out-file ./dist/crawler.js",
+    "build": "set NODE_ENV=production && babel ./src/crawler.js --out-file ./dist/crawler.js",
     "test": "set NODE_ENV=test && eslint ./src/crawler.js"
   },
   "repository": {
@@ -36,6 +36,8 @@
     "url-parse": "^1.1.9"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "eslint": "^4.8.0"
   }
 }
