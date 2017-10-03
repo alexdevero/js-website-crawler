@@ -59,26 +59,26 @@ const visitPage = (url, callback) => {
   // Make the request
   console.log(`Visiting page ${url}`);
   request(url, (error, response, body) => {
-     // Check status code (200 is HTTP OK)
-     console.log(`Status code: ${response.statusCode}`);
-     if(response.statusCode !== 200) {
-       callback();
+    // Check status code (200 is HTTP OK)
+    console.log(`Status code: ${response.statusCode}`);
+    if(response.statusCode !== 200) {
+      callback();
 
-       return;
-     }
+      return;
+    }
 
-     // Parse the document body
-     const $ = cheerio.load(body);
-     let isWordFound = searchForWord($, websiteKeyword);
+    // Parse the document body
+    const $ = cheerio.load(body);
+    let isWordFound = searchForWord($, websiteKeyword);
 
-     if(isWordFound) {
-       console.log(`Word ${websiteKeyword} found at page ${url}`);
-     } else {
-       collectInternalLinks($);
+    if(isWordFound) {
+      console.log(`Word ${websiteKeyword} found at page ${url}`);
+    } else {
+      collectInternalLinks($);
 
-       // In this short program, our callback is just calling crawl()
-       callback();
-     }
+      // In this short program, our callback is just calling crawl()
+      callback();
+    }
   });
 }
 
