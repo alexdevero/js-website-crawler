@@ -1,4 +1,4 @@
-<p align="center"> 
+﻿<p align="center"> 
   <a href="https://david-dm.org/alexdevero/js-website-crawler"><img alt="Dependency Status" src="https://david-dm.org/alexdevero/js-website-crawler.svg?style=flat"></a>
   <a href="https://david-dm.org/alexdevero/js-website-crawler?type=dev"><img alt="devDependency Status" src="https://david-dm.org/alexdevero/js-website-crawler/dev-status.svg?style=flat"></a>
   <a href="https://alexdevero.com"><img alt="Built by DEVERO" src="https://img.shields.io/badge/built%20by-DEVERO-brightgreen.svg?colorB=d30320"></a>
@@ -11,6 +11,7 @@
 Website crawler written in JavaScript built with Node.js.
 
 ### Table of contents
+
 * [Install](#install)
 * [Start crawler](#start-crawler)
 * [Build crawler](#build-crawler)
@@ -20,6 +21,7 @@ Website crawler written in JavaScript built with Node.js.
 * [License](#license)
 
 ## Install
+
 ```
 $ npm install js-website-crawler
 ```
@@ -34,17 +36,20 @@ $ git clone https://github.com/alexdevero/js-website-crawler.git
 ```
 
 ### Start crawler
+
 ```
 yarn
 npm run start
 ```
 
 ### Build crawler
+
 ```
 npm run build
 ```
 
 ### Test source code
+
 ```
 npm run test
 ```
