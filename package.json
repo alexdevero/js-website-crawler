@@ -9,9 +9,9 @@
     "yarn": ">=0.27.x"
   },
   "scripts": {
-    "start": "set NODE_ENV=development && node ./src/crawler.js",
-    "build": "set NODE_ENV=production && babel ./src/crawler.js --out-file ./dist/crawler.js",
-    "test": "set NODE_ENV=test && eslint ./src/crawler.js"
+    "start": "cross-env NODE_ENV=development node ./src/crawler.js",
+    "build": "cross-env NODE_ENV=production babel ./src/crawler.js --out-file ./dist/crawler.js",
+    "test": "cross-env NODE_ENV=test eslint ./src/crawler.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.1",
     "eslint": "^4.10.0"
   }
 }
