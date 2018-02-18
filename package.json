@@ -1,6 +1,6 @@
 {
   "name": "js-website-crawler",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Website crawler written in JavaScript built with Node.js.",
   "main": "crawler.js",
   "engines": {
